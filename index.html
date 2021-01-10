@@ -26,18 +26,18 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0d0d0d">
 
-  
-
   <style type="text/css">
     html, body {
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
-      font-size: 16px;
+      font-size: 12px;
     }
 
-    h1, h4 {
-      margin: 0;
+    @media (min-width: 800px) {
+      html, body {
+        font-size: 16px;
+      }
     }
 
     .hero {
@@ -46,51 +46,58 @@
 
       height: 100vh;
 
-      background: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url(assets/img/background.png) no-repeat center center;
-    }
+      background-image: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url(/assets/img/background.jpg);
 
-    .content {
-      margin-top: 5%;
-      text-align: center;
-      max-width: 600px;
-      color: white;
-    }
+      background-size: cover;
+      background-position: center;
 
-    .content .logo{
-      width: 240px;
-      margin-bottom: 20px;
-    }
-
-    .content h4 {
-      font-size: 20px;
-      letter-spacing: 8px;
-      color: #FEE787;
-    }
-
-    .content h1 {
-      font-size: 30
-      px;
-    }
-
-    .content .opening-soon-message {
       display: flex;
       align-items: center;
       justify-content: center;
+    }
 
-      font-size: 14px;
+    .content {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 30px;
+      color: #fff;
+    }
+
+    .content .logo {
+      width: 240px;
+    }
+
+    .content .our-coffee-beans {
+      font-weight: bold;
+      font-size: 1.25rem;
+
+      letter-spacing: 8px;
+      color: #fee787;
+
+      text-shadow: 0 2px 10px #242424;
+    }
+
+    .content .description {
+      font-size: 2rem;
+      font-weight: bold;
+
+      text-shadow: 0 3px 10px #242424;
+    }
+
+    .content .opening-soon-message {
+      font-size: 1rem;
       font-weight: 700;
 
       color: #242424;
 
-      background-color: #FEE787;
+      background-color: #fee787;
       max-width: 230px;
-      height: 40px;
 
       border-radius: 24px;
+      margin: 0 auto;
+      padding: 15px 0;
 
-      margin: auto;
-      margin-top: 40px;
-      padding: 2px 6px;
+      box-shadow: 0 3px 10px #242424;
     }
   </style>
 
@@ -103,16 +110,13 @@
   <div class="hero">
     <div class="content">
       <!-- Logo -->
-      <img class="logo" src="assets/img/logov2.svg" alt="">
+      <img class="logo" src="/assets/img/logo.svg" alt="">
 
       <!-- Title -->
-      <h4>OUR COFFEE BEANS.</h4>
-      <h1>Locally harvested from different provinces of the Philippines.</h1>
+      <p class="our-coffee-beans">OUR COFFEE BEANS.</p>
+      <p class="description">Locally harvested from different provinces of the Philippines.</p>
 
-      <!--  -->
-      <div class="opening-soon-message">
-        SOON TO OPEN
-      </div>
+      <div class="opening-soon-message">SOON TO OPEN</div>
     </div>
   </div>
 
